@@ -3,6 +3,11 @@
 
 from util import github
 
+import logging
+import logging.config
+
 if __name__ == '__main__':
-    # github.cloneAllRepo('', '/home/china/code/source')
-    pass
+    logging.config.fileConfig('conf/logging.conf')
+    logger = logging.getLogger('main')
+    logger.info('hello world')
+    github.cloneAllRepo('afsalashyana', '/home/china/code/others')
