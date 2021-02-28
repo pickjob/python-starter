@@ -1,13 +1,14 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
-from util import github
 
 import logging
 import logging.config
+import os
+import sys
+
+sys.path.append(os.getcwd())
 
 if __name__ == '__main__':
     logging.config.fileConfig('conf/logging.conf')
     logger = logging.getLogger('main')
     logger.info('hello world')
-    github.cloneAllRepo('afsalashyana', '/home/china/code/others')
