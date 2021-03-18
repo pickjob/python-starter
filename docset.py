@@ -12,16 +12,18 @@ import sys
 
 sys.path.append(os.getcwd())
 
-#
-#   python3 docset.py type name version docLocation
-#       type:
-#           java
-#
+usage = """
+    python3 docset.py type name version docLocation
+        type:
+            java
+"""
+
 if __name__ == '__main__':
-    logging.config.fileConfig('conf/logging.conf')
+    logging.config.fileConfig('logging.conf')
     logger = logging.getLogger('main')
     if len(sys.argv) < 5:
         logger.error('error arguement number!')
+        logger.info(usage)
         sys.exit(-1)
     docset_type = sys.argv[1]
     docset_name = sys.argv[2]

@@ -9,6 +9,6 @@ import sys
 sys.path.append(os.getcwd())
 
 if __name__ == '__main__':
-    logging.config.fileConfig('conf/logging.conf')
+    logging.config.fileConfig('logging.conf')
     logger = logging.getLogger('main')
     logger.info('hello world')
