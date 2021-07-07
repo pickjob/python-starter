@@ -11,13 +11,16 @@ import sys
 import httpx
 from urllib.parse import urljoin
 
-sys.path.append(os.getcwd())
-logging.config.fileConfig('logging.conf')
-logger = logging.getLogger('main')
-
 usage = """
-python3 svn-walk.py url targetPath user password
+python svn-walk.py url targetPath user password
 """
+
+sys.path.append(os.getcwd())
+if os.path.isfile('logging.conf'):
+    if not os.path.isdir('logs'):
+        os.mkdir('logs')
+    logging.config.fileConfig('logging.conf')
+logger = logging.getLogger()
 
 
 def parse_page(svn_url, conn, svn_user, svn_password):

@@ -1,0 +1,14 @@
+# python ide environment
+pip3 install --user python-language-server pylint autopep8
+# http request
+pip3 install --user httpx
+# html parse
+pip3 install --user beautifulsoup4 html5lib
+# qt
+pip3 install --user pyside6
+# xlsx
+pip3 install --user openpyxl
+# cryptography
+pip3 install --user cryptography
+# mysql
+pip3 install --user mysql-connector-python

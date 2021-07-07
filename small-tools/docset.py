@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import bs4
 import logging
 import logging.config
 import os
@@ -10,17 +9,20 @@ import shutil
 import sqlite3
 import sys
 
-sys.path.append(os.getcwd())
-
 usage = """
     python3 docset.py type name version docLocation
         type:
             java
 """
 
-if __name__ == '__main__':
+sys.path.append(os.getcwd())
+if os.path.isfile('logging.conf'):
+    if not os.path.isdir('logs'):
+        os.mkdir('logs')
     logging.config.fileConfig('logging.conf')
-    logger = logging.getLogger('main')
+logger = logging.getLogger()
+
+if __name__ == '__main__':
     if len(sys.argv) < 5:
         logger.error('error arguement number!')
         logger.info(usage)
