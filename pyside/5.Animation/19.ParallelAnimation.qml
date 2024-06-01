@@ -1,0 +1,2 @@
+// 
+// ParallelAnimation(QtQuick): Animation
