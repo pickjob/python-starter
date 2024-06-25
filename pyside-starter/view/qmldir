@@ -1,0 +1,7 @@
+module App
+
+
+SwissKnife          1.0         swissknife/SwissKnife.qml
+TextConvert         1.0         swissknife/TextConvert.qml
+
+FlickablePane       1.0         common/FlickablePane.qml

@@ -46,10 +46,13 @@
 //          QtQuick.Controls.Frame
 //              QtQuick.Controls.GroupBox
 // 
+// QtQuick.Rectangle
+// 
 // QtQuick.Controls.Popup
 //      QtQuick.Controls.ToolTip
 //      QtQuick.Controls.Drawer
 //      QtQuick.Controls.Dialog
+//          QtQuick.Dialogs.FileDialog
 // 
 // View
 //      QtQuick.ListView: Flickable
