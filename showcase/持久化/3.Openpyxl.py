@@ -6,7 +6,9 @@ import openpyxl
 if __name__ == '__main__':
     # workbook
     wb = openpyxl.Workbook()
+    # 读取Excel文档
     wb = openpyxl.load_workbook('document.xlsx', read_only=True)
+    # 保存Excel文档
     wb.save('balances.xlsx')
 
     # worksheet

@@ -51,3 +51,12 @@
 #       close()
 # sqlite3.Row
 #       key()
+import sqlite3
+
+if __name__ == '__main__':
+    con = sqlite3.connect("name.db")
+    dict = {}
+    with con:
+        cur = con.cursor()
+        for row in cur.execute("SELECT col1, col2 FROM table_name "):
+            dict[row[0]] = row[1]
